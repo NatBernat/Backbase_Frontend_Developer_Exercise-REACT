@@ -1,4 +1,5 @@
 import { Place } from "../../types/types";
+import PlaceWeatherStyled from "./PlaceWeatherStyled";
 
 const PlaceWeather = ({
   place: { name, temperature, windSpeed },
@@ -6,13 +7,13 @@ const PlaceWeather = ({
   place: Place;
 }): JSX.Element => {
   return (
-    <div>
+    <PlaceWeatherStyled>
       <h3>{name}</h3>
       <ul>
-        <li>Temperature: {temperature}ºC</li>
-        <li>Wind speed: {windSpeed}km/h</li>
+        <li>{temperature}°C</li>
+        <li>{windSpeed} km/h</li>
       </ul>
-    </div>
+    </PlaceWeatherStyled>
   );
 };
 
